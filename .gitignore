@@ -3,3 +3,11 @@ __pycache__/
 *.db
 venv/
 .env
+.vscode/
+
+# project backup / test files
+*_backup.py
+*_final_working_backup.py
+update_database.py
+check_data.py
+notification_test.py

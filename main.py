@@ -193,12 +193,12 @@ def check_reminders():
 
 root = tk.Tk()
 
-root.title("Medicine Management System")
+root.title("Medicine Management and Reminder System")
 root.geometry("900x750")
 
 title = tk.Label(
     root,
-    text="Medicine Management System",
+    text="Medicine Management and Reminder System",
     font=("Arial", 22, "bold")
 )
 title.pack(pady=10)

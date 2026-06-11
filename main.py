@@ -273,13 +273,30 @@ tk.Label(
     font=("Arial", 12, "bold")
 ).pack(pady=10)
 
+# Frame for Listbox and Scrollbar
+
+list_frame = tk.Frame(root)
+list_frame.pack()
+
+# Scrollbar
+
+scrollbar = tk.Scrollbar(list_frame)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+# Listbox
+
 medicine_list = tk.Listbox(
-    root,
+    list_frame,
     width=90,
-    height=15
+    height=15,
+    yscrollcommand=scrollbar.set
 )
 
-medicine_list.pack()
+medicine_list.pack(side=tk.LEFT)
+
+# Connect Scrollbar and Listbox
+
+scrollbar.config(command=medicine_list.yview)
 
 load_medicines()
 
